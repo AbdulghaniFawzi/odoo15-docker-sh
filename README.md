@@ -1,14 +1,14 @@
 # odoo-docker-sh
  # Quick install
 
-Installing Odoo 16 with one command.
+Installing Odoo 15 with one command.
 
 (Supports multiple Odoo instances on one server)
 
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/elblasy33/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-16-one 10016 20016
+curl -s https://raw.githubusercontent.com/elblasy33/odoo15-d0cker-sh/main/run.sh | sudo bash -s odoo-15-one 10015 20015
 ```
 
 to set up first Odoo instance @ `localhost:10015` (default master password: `Elblasy2022@1234`)
@@ -16,15 +16,15 @@ to set up first Odoo instance @ `localhost:10015` (default master password: `Elb
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/elblasy33/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-two 11016 21016
+curl -s https://raw.githubusercontent.com/elblasy33/odoo15-d0cker-sh/main/run.sh | sudo bash -s odoo-two 11015 21015
 ```
 
 to set up another Odoo instance @ `localhost:11015` (default master password: `Elblasy2022@1234`)
 
 Some arguments:
-* First argument (**odoo16-one**): Odoo deploy folder
-* Second argument (**10016**): Odoo port
-* Third argument (**20016**): live chat port
+* First argument (**odoo15-one**): Odoo deploy folder
+* Second argument (**10015**): Odoo port
+* Third argument (**20015**): live chat port
 
 If `curl` is not found, install it:
 
@@ -41,11 +41,11 @@ Start the container:
 docker-compose up
 ```
 
-* Then open `localhost:10016` to access Odoo 16.0. If you want to start the server with a different port, change **10016** to another value in **docker-compose.yml**:
+* Then open `localhost:10015` to access Odoo 16.0. If you want to start the server with a different port, change **10015** to another value in **docker-compose.yml**:
 
 ```
 ports:
- - "10016:8069"
+ - "10015:8069"
 ```
 
 Run Odoo container in detached mode (be able to close terminal without stopping Odoo):
@@ -57,7 +57,7 @@ docker-compose up -d
 **If you get the permission issue**, change the folder permission to make sure that the container is able to access the directory:
 
 ``` sh
-$ git clone https://github.com/elblasy33/odoo16-docker-sh.git
+$ git clone https://github.com/elblasy33/odoo15-d0cker-sh.git
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 $ mkdir -p postgresql
@@ -79,7 +79,7 @@ The **addons/** folder contains custom addons. Just put your custom addons if yo
 
 * To change Odoo configuration, edit file: **etc/odoo.conf**.
 * Log file: **etc/odoo-server.log**
-* Default database password (**admin_passwd**) is `mostafa@1234`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
+* Default database password (**admin_passwd**) is `Elblasy2022@1234`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
 
 # Odoo container management
 
@@ -126,9 +126,9 @@ server {
 
 # Odoo 15 screenshots
 
-<img src="screenshots/odoo-15-apps-screenshot.png" width="50%">
+<img src="screenshots/odoo-15-welcome-screenshot.png" width="50%">
 
-<img src="screenshots/odoo-15-welcome-screenshot.png" width="100%">
+<img src="screenshots/odoo-15-apps-screenshot.png" width="100%">
 
 <
 
