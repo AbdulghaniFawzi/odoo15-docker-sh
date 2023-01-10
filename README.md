@@ -8,18 +8,18 @@ Installing Odoo 15 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/elblasy33/odoo15-d0cker-sh/main/run.sh | sudo bash -s odoo-15-one 10015 20015
+curl -s https://raw.githubusercontent.com/abdulghanifawzi/odoo15-d0cker-sh/main/run.sh | sudo bash -s odoo-15-one 10015 20015
 ```
 
-to set up first Odoo instance @ `localhost:10015` (default master password: `Elblasy2022@1234`)
+to set up first Odoo instance @ `localhost:10015` (default master password: `bzs2022@1234`)
 
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/elblasy33/odoo15-d0cker-sh/main/run.sh | sudo bash -s odoo-two 11015 21015
+curl -s https://raw.githubusercontent.com/abdulghanifawzi/odoo15-d0cker-sh/main/run.sh | sudo bash -s odoo-two 11015 21015
 ```
 
-to set up another Odoo instance @ `localhost:11015` (default master password: `Elblasy2022@1234`)
+to set up another Odoo instance @ `localhost:11015` (default master password: `bzs2022@1234`)
 
 Some arguments:
 * First argument (**odoo15-one**): Odoo deploy folder
@@ -57,7 +57,7 @@ docker-compose up -d
 **If you get the permission issue**, change the folder permission to make sure that the container is able to access the directory:
 
 ``` sh
-$ git clone https://github.com/elblasy33/odoo15-d0cker-sh.git
+$ git clone https://github.com/abdulghanifawzi/odoo15-d0cker-sh.git
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 $ mkdir -p postgresql
@@ -79,7 +79,7 @@ The **addons/** folder contains custom addons. Just put your custom addons if yo
 
 * To change Odoo configuration, edit file: **etc/odoo.conf**.
 * Log file: **etc/odoo-server.log**
-* Default database password (**admin_passwd**) is `Elblasy2022@1234`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
+* Default database password (**admin_passwd**) is `bzs2022@1234`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
 
 # Odoo container management
 
@@ -131,4 +131,3 @@ server {
 <img src="screenshots/odoo-15-apps-screenshot.png" width="100%">
 
 <
-
